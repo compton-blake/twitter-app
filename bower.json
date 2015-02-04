@@ -1,0 +1,27 @@
+{
+  "name": "twitter-app",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "*",
+    "angular-ui": "*",
+    "bootstrap-sass": "*",
+    "requirejs": "*"
+  },
+  "exportsOverride": {
+    "bootstrap-*": {
+      "js": "**/*.js",
+      "sass": "**/*.scss"
+    },
+    "angular-ui": {
+      "js": "**/angular-ui*"
+    },
+    "jquery": {
+      "js": "**/jquery.js"
+    },
+    "*": { 
+      "js": "**/*.js",
+      "sass": "**/*.scss",
+      "css": "**/*.css"
+    }
+  }
+}
