@@ -3,7 +3,8 @@ module.exports = function(grunt) {
   grunt.initConfig({
     bower: {
       install: {
-        //just run 'grunt bower:install' and you'll see files from your Bower packages in lib directory
+        // https://github.com/yatskevich/grunt-bower-task
+        // just run 'grunt bower:install'
         options: {
           targetDir: './static',
           install: true,
@@ -14,7 +15,46 @@ module.exports = function(grunt) {
         }
       }
     }
+    watch: {
+      scripts: {
+        files: ['static/js/app/**/*.js', 'static/sass/**/*.scss', 'static/sass/**/*.scss'],
+        tasks: ['jshint', 'sass', 'scss-lint'],
+        options: {
+          spawn: false
+        }
+      }
+    },
+    jshint: {
+      all: {
+        src: ['static/js/app/**/*.js']
+      }
+    },
+    sass: {                              
+      dist: {                            
+        options: {                       
+          style: 'expanded'
+        },
+        files: {                         
+          'main.css': 'static/sass/**/*.scss'
+        }
+      }
+    },
+    scsslint: {
+      allFiles: [
+        'static/sass/**/*.scss'
+      ],
+      options: {
+        bundleExec: true,
+        config: '.scss-lint.yml',
+        reporterOutput: 'scss-lint-report.xml',
+        colorizeOutput: true
+      },
+    }
   });
 
   grunt.loadNpmTasks('grunt-bower-task');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-scss-lint');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 };
