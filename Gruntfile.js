@@ -14,11 +14,11 @@ module.exports = function(grunt) {
           bowerOptions: {}
         }
       }
-    }
+    },
     watch: {
       scripts: {
         files: ['static/js/app/**/*.js', 'static/sass/**/*.scss', 'static/sass/**/*.scss'],
-        tasks: ['jshint', 'sass', 'scss-lint'],
+        tasks: ['jshint', 'sass', 'scsslint'],
         options: {
           spawn: false
         }
@@ -30,25 +30,23 @@ module.exports = function(grunt) {
       }
     },
     sass: {                              
-      dist: {                            
+       dist: {                           
         options: {                       
           style: 'expanded'
         },
         files: {                         
-          'main.css': 'static/sass/**/*.scss'
+          'static/css/main.css': 'static/sass/main.scss'
         }
       }
     },
     scsslint: {
-      allFiles: [
-        'static/sass/**/*.scss'
-      ],
+      allFiles: [ 'static/sass/*.scss' ],
       options: {
         bundleExec: true,
         config: '.scss-lint.yml',
         reporterOutput: 'scss-lint-report.xml',
         colorizeOutput: true
-      },
+      }
     }
   });
 
