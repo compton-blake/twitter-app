@@ -10,7 +10,7 @@
   "exportsOverride": {
     "bootstrap-*": {
       "js": "**/*.js",
-      "sass": "**/*.scss"
+      "sass": "assets/stylesheets"
     },
     "angular-ui": {
       "js": "**/angular-ui*"
