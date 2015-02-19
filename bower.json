@@ -5,8 +5,10 @@
     "jquery": "1.9.1",
     "angular": "*",
     "angular-ui": "*",
+    "ui-router": "*",
     "bootstrap-ui": "*",
     "bootstrap-sass": "*",
+    "requirejs-domready": "*",
     "requirejs": "*"
   },
   "exportsOverride": {

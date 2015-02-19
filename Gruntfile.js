@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         // https://github.com/yatskevich/grunt-bower-task
         // just run 'grunt bower:install'
         options: {
-          targetDir: './static',
+          targetDir: './static/modules',
           install: true,
           verbose: true,
           cleanTargetDir: true,
