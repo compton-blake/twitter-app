@@ -2,8 +2,10 @@
   "name": "twitter-app",
   "version": "0.0.0",
   "dependencies": {
+    "jquery": "1.9.1",
     "angular": "*",
     "angular-ui": "*",
+    "bootstrap-ui": "*",
     "bootstrap-sass": "*",
     "requirejs": "*"
   },
