@@ -22,10 +22,13 @@
     "jquery": {
       "js": "**/jquery.js"
     },
-    "*": { 
+    "*": {
       "js": "**/*.js",
       "sass": "**/*.scss",
       "css": "**/*.css"
     }
+  },
+  "devDependencies": {
+    "ui-router-extras": "~0.0.13"
   }
 }

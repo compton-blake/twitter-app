@@ -15,6 +15,19 @@ module.exports = function(grunt) {
         }
       }
     },
+    connect: {
+      options: {
+        port: 8000,
+        hostname: '*',
+      },
+      dev: {
+        options: {
+          // livereload: true,
+          open: true,
+          keepalive: true
+        }
+      }
+    },
     watch: {
       scripts: {
         files: ['static/js/app/**/*.js', 'static/sass/**/*.scss', 'static/sass/**/*.scss'],
@@ -55,4 +68,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-scss-lint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 };
