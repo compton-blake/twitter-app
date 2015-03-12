@@ -24,5 +24,5 @@ require.config({
         },
     },
 
-    deps: ['./bootstrap']
+    deps: ['bootstrap']
 });

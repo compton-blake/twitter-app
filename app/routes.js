@@ -14,8 +14,8 @@ define(['./app', 'angularAMD'], function(app, angularAMD) {
                 angularAMD.route({
                     url: '/home',
                     templateUrl: 'templates/master.html',
-                    controller: 'MasterCtrl',
-                    controllerUrl: 'controllers/MasterCtrl'})
+                    controllerUrl: 'controllers/MasterCtrl'
+                })
             )
     }])
 });

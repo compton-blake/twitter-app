@@ -1,6 +1,6 @@
-define(['./module'], function (controllers) {
+define(['../app'], function (app) {
     'use strict';
-    controllers.controller('MasterCtrl', ['$scope', function ($scope) {
+    app.register.controller('MasterCtrl', ['$scope', function ($scope) {
        $scope.test = "Larry";
     }]);
 });
