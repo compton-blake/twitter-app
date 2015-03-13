@@ -10,12 +10,22 @@ define(['./app', 'angularAMD'], function(app, angularAMD) {
         $urlRouterProvider.otherwise('/');
 
         $stateProvider
-	        .state('index',
-                angularAMD.route({
-                    url: '/home',
-                    templateUrl: 'templates/master.html',
-                    controllerUrl: 'controllers/MasterCtrl'
-                })
-            )
+	        .state('index', {
+                url: "/",
+                views: {
+                    "main": angularAMD.route({
+                        templateUrl: 'templates/login.html',
+                        controllerUrl: 'controllers/LoginCtrl'
+                    }),
+                    // "header": angularAMD.route({
+                    //     templateUrl: 'templates/layouts/base/_header.html'
+                    //     //controllerUrl: 'controllers/LoginCtrl'
+                    // }),
+                    "footer": angularAMD.route({
+                        templateUrl: 'templates/layouts/base/_footer.html'
+                        //controllerUrl: 'controllers/LoginCtrl'
+                    })
+                }
+            })
     }])
 });

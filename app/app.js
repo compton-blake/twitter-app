@@ -5,15 +5,11 @@
 define([
     'angular',
     'angularAMD',
-    'uiRouter',
-    './controllers/module',
-    './directives/module',
-    './filters/module',
-    './services/module'
+    'uiRouter'
 ], function (ng, angularAMD) {
     'use strict';
 
-    var app = angular.module("app", ['ui.router', 'app.controllers'], function() {
+    var app = angular.module("app", ['ui.router'], function() {
         console.log('App Loaded');
     });
 

@@ -11,9 +11,11 @@
         <link rel="stylesheet" href="../static/css/main.css">
         <script src="../static/modules/js/requirejs/require.js" data-main="../app/main.js"></script>
     </head>
-    <body>
+    <body ng-controller="MasterCtrl">
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        <header>
+            <h1>File to be loaded when Route hits {{ test }}</h1>
+        </header>
 
         <div ui-view></div>
     </body>
