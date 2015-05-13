@@ -3,10 +3,10 @@ define(['app'], function (app) {
     app.register.controller('LoginCtrl', ['$scope', '$http', function ($scope, $http) {
        $scope.test = "Dave";
 
-       $http.get('/test-xhr').success(function(data, status, headers, config){
-       	console.log(data);
-       }).error(function(data, status, headers, config) {
-       	console.log(data);
+       $http.get('/test-xhr').then(function(response) {
+       		console.log(response);
+       }, function(errResponse) {
+
        });
 
     }]);
